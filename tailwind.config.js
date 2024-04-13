@@ -17,6 +17,7 @@ module.exports = {
           700: '#1F869E',
           800: '#1A7185',
           900: '#155A6A',
+          1000: 'linear-gradient(90deg, rgba(217, 217, 217, 0.00) 0%, #155A6A 100%)'
         },
         'gray': {
           50: '#F9FAFB',

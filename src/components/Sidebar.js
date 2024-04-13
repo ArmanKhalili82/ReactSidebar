@@ -32,22 +32,22 @@ const Sidebar = () => {
   ]
 
   return (
-    <div className={`${open ? "w-72" : "w-20"} duration-300 h-full bg-gray-100 relative`}>
+    <div className={`${open ? "w-72" : "w-16"} duration-300 h-full bg-gray-100 relative`}>
       <img 
         src={Arrow} 
         className={`absolute cursor-pointer rounded-full left-3 top-9 w-7 border-2 border-black ${!open && "rotate-180"}`} 
         onClick={() => setOpen(!open)}/>
 
         <div>
-          <img src={Gol} className='cursor-pointer duration-300' />
+          <img src={Gol} className='cursor-pointer duration-300 w-20' />
         </div>
 
         {NavLinks.map((navlink, index) => {
           return (
             <ul className='pt-6'>
-            <Link key={index} to={navlink.src} className='text-primary-900 flex gap-x-4 cursor-pointer p-2'>
+            <Link key={index} to={navlink.src} className='text-primary-900 flex gap-x-4 cursor-pointer p-2 hover:font-bold focus:bg-primary-1000'>
               <img src={navlink.icon} />
-              <span>{navlink.title}</span>
+              <span className={`${!open && "hidden"} origin-left duration-200`}>{navlink.title}</span>
             </Link>
           </ul>
           ) 
